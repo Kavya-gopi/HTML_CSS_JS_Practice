@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="name"></div>
+    <div id="age"></div>
+    <button onclick="prev()"><i class="fa-solid fa-chevron-left"></i></button>
+    <button onclick="next()"><i class="fa-solid fa-chevron-right"></i></button>
+    <script>
+        let names=[{name:"Dharanya",age:22},{name:"Kavya",age:21},{name:"Keerthi",age:22},{name:"Lav",age:20}];
+        let currentIndex=0;
+
+        const prev=()=>{
+            console.log(currentIndex);
+            currentIndex--;
+            if(currentIndex<0)
+                currentIndex=names.length-1;
+
+            
+            document.getElementById("name").textContent=names[currentIndex].name;
+            document.getElementById("age").textContent=names[currentIndex].age;
+        }
+        const next=()=>{
+            console.log(currentIndex);
+            currentIndex++;
+
+            if(currentIndex>names.length-1)
+                currentIndex=0;
+            
+            document.getElementById("name").textContent=names[currentIndex].name;
+            document.getElementById("age").textContent=names[currentIndex].age;
+
+        }
+        window.addEventListener('load',function(){
+            document.getElementById("name").textContent=names[0].name;
+            document.getElementById("age").textContent=names[0].age;
+        })
+    </script>
+</body>
+</html>

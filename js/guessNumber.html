@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess number</title>
+</head>
+<body>
+    Enter a number 1-10:<br>
+    <input type="text" id="ans">
+    <button onclick="check()">Check</button><br>
+    <span id="result"></span>
+    <script>
+        let genNum=Math.floor(Math.random()*10+1)
+        let count=0;
+        const check=()=>{
+            let resultElement=document.getElementById("result")
+            count++;
+
+            let num=document.getElementById("ans").value
+            if(count>=3){
+                resultElement.innerHTML=`You have reached the maximum attempts`
+                document.getElementById('num').disabled=true
+            }
+            
+           
+            else if(num>genNum){
+                resultElement.innerHTML=`${num} is greater than generated Number `
+            }
+            else if(num<genNum){
+                resultElement.innerHTML=`${num} is lesser than generated number`
+
+            }
+            else{
+                resultElement.innerHTML=`Your guessed it correctly in ${count} attempt`
+                resultElement.style.color='red'
+
+            }
+        }
+       
+
+    </script>
+</body>
+</html>

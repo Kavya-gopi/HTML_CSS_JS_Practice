@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count=0;
+
+        function IncDec(op){
+            alert('calling inc dec '+op);
+        
+            if(op==='+'){
+                count++;
+            }
+            else{
+                if(count>0){
+                  count--;
+                }
+                
+            }
+            
+
+           document.getElementById('result').innerHTML=count;
+           // console.log(count);
+
+        }
+        function generateRandomNumber(){
+                let ran=Math.floor(Math.random()*100)+1;
+                document.getElementById('randomNum').innerText=ran;
+                
+            }
+    </script>
+</head>
+<body>
+    <!-- <button onclick="IncDec('+')">+</button>
+    <span id="result">0</span>
+    <button onclick="IncDec('-')">-</button> -->
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+    <span id="randomNum"></span>
+</body>
+</html>
