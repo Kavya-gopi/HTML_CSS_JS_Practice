@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add task</title>
+</head>
+<body>
+    <div id="input">
+        <input type="text" id="task" name="task" placeholder="Enter your task">
+        <ul id="myList"></ul>
+        <button onclick="addtask()">Add</button>
+    </div>
+    
+    <script>
+        function addtask(){
+           
+            let input=document.getElementById("task").value;
+            if(input.trim()===""){
+                alert("Task must be filled out");
+            }
+            else{
+            let li=document.createElement("li");
+            li.textContent=input;
+            let unOrderedlist=document.getElementById("myList");
+            unOrderedlist.appendChild(li);
+            document.getElementById("task").value=" ";
+            }
+        }
+    </script>
+</body>
+</html>
