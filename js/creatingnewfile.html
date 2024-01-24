@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding para</title>
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <span id="container"></span>
+    <button onclick="addpara()">Click here to add para</button>
+    <script>
+        function addpara(){
+            //creating a new Element
+            let newPara=document.createElement("p");
+            newPara.textContent="This is a dynamically generated paragraph";
+
+            //Adding new Element to the span tag
+            let spanElement=document.getElementById("container");
+            spanElement.appendChild(newPara);
+        }
+    </script>
+</body>
+</html>
