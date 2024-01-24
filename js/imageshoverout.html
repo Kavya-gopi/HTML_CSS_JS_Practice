@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover and out</title>
+</head>
+<body>
+    <img src="images/img1.jpg" id="img" alt="image" width="200px" height="240px" onmouseover="changeImage()" onmouseout="originalImage()">
+    <script>
+        function changeImage(){
+            let imgElement=document.getElementById("img");
+            imgElement.src="images/img2.jpg";
+
+        }
+        function originalImage(){
+            let imgElement=document.getElementById("img");
+            imgElement.src="images/img1.jpg";
+        }
+    </script>
+    
+
+</body>
+</html>
