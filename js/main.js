@@ -23,6 +23,7 @@ let products=[{
 }];
 let currentIndex=0;
 const img=document.getElementById("img");
+setInterval(()=>next(),2000);
 
 const prev=()=>{
     currentIndex--;
