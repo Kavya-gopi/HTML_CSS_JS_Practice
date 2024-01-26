@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Counter(){
+            let count=0;
+            return{
+                increment:()=>++count,
+                decrement:()=>--count,
+                reset:()=>count=0,
+                displayCount:()=>console.log(`count value is ${count}`)
+
+            }
+        }
+        let counter1=Counter();
+        console.log(counter1.displayCount())
+        console.log(counter1.increment())
+        console.log(counter1.increment())
+
+        let counter2=Counter();
+        console.log(counter2.decrement());
+    </script>
+</body>
+</html>

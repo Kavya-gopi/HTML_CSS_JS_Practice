@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person(name,age,gender){
+            return{
+                name:name,
+                age:age,
+                gender:gender,
+                welcome:function(){
+                    console.log(`${this.name} ${this.age} ${this.gender}`)
+
+                }
+            }
+        }
+        const person1=person('john',20,'M')
+        person1.welcome();
+        const person2=person('clara',21,'F')
+        person2.welcome()
+    </script>
+</body>
+</html>
