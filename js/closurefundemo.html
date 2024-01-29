@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure function</title>
+</head>
+<body>
+    <script>
+        function calculateDiscount(discountPercentage){
+            let discountRate=discountPercentage/100;
+            console.log("discount rate-->",discountRate);
+            return function(productPrice){
+                console.log("ProductPrice-->",productPrice)
+                return productPrice*discountRate;
+            }
+        }
+        let calculateDiscountPrice=calculateDiscount(10);
+        console.log(calculateDiscountPrice(200));
+        console.log(calculateDiscountPrice(1000));
+        let calculateDiscountPrice1=calculateDiscount(20);
+        console.log(calculateDiscountPrice1(1000));
+    </script>
+</body>
+</html>

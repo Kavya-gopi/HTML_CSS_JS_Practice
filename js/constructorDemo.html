@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConstructorDemo</title>
+</head>
+<body>
+    <script>
+        function Person(name,age,gender,city){
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+            this.city=city;
+        }
+        Person.prototype.displayPerson=function(){
+            console.log(`${this.name} ${this.age} ${this.gender} ${this.city}`);
+        }
+        let person1=new Person('James',20,'Male','Chennai');
+        let person2=new Person('John',21,'Male','Mumbai');
+        person1.displayPerson();
+        person2.displayPerson();
+
+        person1.__proto__.displayGender=function(){
+            console.log(`${this.gender}`);
+        }
+        person1.displayGender();
+        person2.displayGender();
+        console.log("---------------");
+
+        function Student(name,age,gender,city,grade){
+            Person.call(this,name,age,gender,city);
+            this.grade=grade;
+        }
+        Object.setPrototypeOf(Student.prototype, Person.prototype);
+        // Student.prototype=Object.create(Person.prototype);
+        Student.prototype.displayGrade=function(){
+            console.log('Grade is ',this.grade);
+
+        }
+        let student1=new Student('john',20,'M','CHN','A');
+        console.log(student1.__proto__);
+        student1.displayPerson();
+        student1.displayGrade();
+
+
+    </script>
+</body>
+</html>
