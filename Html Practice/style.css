@@ -1,0 +1,67 @@
+body{
+    background-color:beige;
+    color:blue;
+    color:rgb(145,76,0);
+    position: fixed;
+}
+
+p{
+    color:rgba(255,0,0,0.6);
+    background-color: aquamarine;
+    word-spacing: 0.3em;
+    text-align: justify;
+    
+}
+
+p[id=fontstyles]{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: burlywood;
+    font-size: larger;
+    color:rgb(20,17,255);
+    font-stretch:condensed;
+    font-variant: small-caps;
+    font-style: oblique;
+
+}
+
+h2{
+    font-weight: normal;
+    text-decoration:underline;
+    text-transform:none;
+    text-decoration: line-through;
+    letter-spacing: 0.4em;
+    
+}
+p::first-letter{
+    font-size: 2em;
+}
+
+p::first-line{
+    text-decoration:underline ;
+}
+
+a:link{
+    color:red;
+}
+
+a:visited{
+    color:blue;
+}
+
+a:hover{
+    color:black;
+}
+/* When we press the tab to point the 
+link address we can use focus 
+to style the links */
+a:focus{
+    color:green;       
+}
+/* When we click to move to the next page slight 
+variation will occur to style this use active 
+to style the link */
+
+a:active{
+    color: chartreuse;
+}
+
