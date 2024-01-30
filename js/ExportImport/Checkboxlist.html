@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkbox List Example</title>
+</head>
+<body>
+
+<h2>Todo List with Checkboxes</h2>
+
+<ul id="todoList">
+  <!-- List items will be dynamically added here -->
+</ul>
+
+<script>
+  // Sample data for the list
+  const todoItems = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
+
+  // Function to create a checkbox and append it to the list
+  function createCheckbox(itemText) {
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+
+    const listItem = document.createElement('li');
+    listItem.appendChild(checkbox);
+    
+    const textNode = document.createTextNode(itemText);
+    listItem.appendChild(textNode);
+
+    document.getElementById('todoList').appendChild(listItem);
+  }
+
+  // Populate the list with checkboxes
+  todoItems.forEach(item => {
+    createCheckbox(item);
+  });
+</script>
+
+</body>
+</html>
